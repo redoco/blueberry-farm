@@ -7,14 +7,14 @@
 <meta name="description" content="マーダーミステリーの通過記録と日程、GMできる作品の帳面">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=IM+Fell+English:ital@0;1&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&family=Klee+One:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#F2ECDF;--paper2:#E8E0CD;--ink:#23263A;--ink2:#5F5B53;--rule:#D2C6AC;
   --berry:#33407A;--berry2:#6C77B0;--leaf:#55703F;--margin:#B4513F;--sun:#9A6B2E;
-  --head:"Kaisei Opti","Hiragino Mincho ProN","Yu Mincho",serif;
-  --body:"Kaisei Opti","Hiragino Mincho ProN","Yu Mincho",serif;
-  --frak:"UnifrakturMaguntia","IM Fell English",serif;
+  --head:"Kaisei Decol","Hiragino Mincho ProN","Yu Mincho",serif;
+  --body:"Klee One","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  --frak:"IM Fell English","Times New Roman",serif;
   --latin:"IM Fell English","Times New Roman",serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
@@ -25,7 +25,7 @@
   --berry:#A3AEE8;--berry2:#7F8AC4;--leaf:#9CB880;--margin:#D88472;--sun:#D2A86E}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15.5px;font-weight:500;line-height:1.85;
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15.5px;line-height:1.85;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .24 0 0 0 0 .14 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E")}
 .page{max-width:860px;margin:0 auto;padding:max(26px,env(safe-area-inset-top)) 16px 64px}
 a{color:var(--berry)}
@@ -40,7 +40,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .sprig .lf{fill:var(--leaf)}
 .sprig .bb{fill:var(--berry)}
 .sprig .hl{fill:var(--paper);opacity:.55}
-.en{margin:0;font-family:var(--frak);color:var(--berry2);font-size:19px;line-height:1.2;letter-spacing:.02em}
+.en{margin:0;font-family:var(--frak);font-style:italic;color:var(--berry2);font-size:18px;line-height:1.2;letter-spacing:.02em}
 .orn{text-align:center;color:var(--berry2);font-size:15px;letter-spacing:.6em;margin:6px 0 0;line-height:1}
 h1{margin:0;font-family:var(--head);font-weight:700;font-size:clamp(28px,6.4vw,46px);line-height:1.2;letter-spacing:.04em}
 .tally{margin:0;text-align:right;line-height:1.1}
@@ -77,7 +77,7 @@ h1{margin:0;font-family:var(--head);font-weight:700;font-size:clamp(28px,6.4vw,4
 .ledger summary:hover{background:var(--paper2)}
 .ledger details[open] summary{background:var(--paper2)}
 .no{font-family:var(--latin);color:var(--ink2);text-align:right;padding-right:10px;font-size:15px}
-.ttl{overflow-wrap:anywhere;font-family:var(--head);font-size:16.5px;font-weight:700}
+.ttl{overflow-wrap:anywhere;font-family:var(--head);font-size:17px}
 .tg{font-size:12px;color:var(--ink2);white-space:nowrap}
 .dt{font-family:var(--latin);font-size:14px;color:var(--ink2);text-align:right;white-space:nowrap}
 .more{padding:6px 2px 14px calc(3.5em + 16px);display:flex;gap:16px;align-items:flex-start}
@@ -130,7 +130,7 @@ h2.sub::after{content:"";flex:1;height:1px;background:var(--rule)}
 .gml summary::-webkit-details-marker{display:none}
 .gml summary:hover,.gml details[open] summary{background:var(--paper2)}
 .th{width:52px;height:52px;object-fit:cover;border:1px solid var(--rule);background:var(--paper2);display:grid;place-items:center;font-family:var(--head);color:var(--ink2)}
-.gt{overflow-wrap:anywhere;line-height:1.5;font-family:var(--head);font-size:16.5px;font-weight:700}
+.gt{overflow-wrap:anywhere;line-height:1.5;font-family:var(--head);font-size:17px}
 .gs{font-size:12px;color:var(--ink2)}
 .gs .hot{color:var(--margin)}
 .gml .more{padding-left:66px}
