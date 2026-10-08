@@ -7,13 +7,14 @@
 <meta name="description" content="マーダーミステリーの通過記録と日程、GMできる作品の帳面">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&family=Klee+One:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Zen+Antique+Soft&family=IM+Fell+English:ital@0;1&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#F2ECDF;--paper2:#E8E0CD;--ink:#23263A;--ink2:#5F5B53;--rule:#D2C6AC;
   --berry:#33407A;--berry2:#6C77B0;--leaf:#55703F;--margin:#B4513F;--sun:#9A6B2E;
-  --head:"Kaisei Decol","Hiragino Mincho ProN","Yu Mincho",serif;
-  --body:"Klee One","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  --head:"Hina Mincho","Zen Antique Soft","Hiragino Mincho ProN","Yu Mincho",serif;
+  --body:"Zen Antique Soft","Hiragino Mincho ProN","Yu Mincho",serif;
+  --frak:"UnifrakturMaguntia","IM Fell English",serif;
   --latin:"IM Fell English","Times New Roman",serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
@@ -39,8 +40,9 @@ button,input,select,textarea{font:inherit;color:inherit}
 .sprig .lf{fill:var(--leaf)}
 .sprig .bb{fill:var(--berry)}
 .sprig .hl{fill:var(--paper);opacity:.55}
-.en{margin:0;font-family:var(--latin);font-style:italic;color:var(--berry2);font-size:16px;line-height:1.2}
-h1{margin:0;font-family:var(--head);font-weight:700;font-size:clamp(28px,6.4vw,46px);line-height:1.2;letter-spacing:.04em}
+.en{margin:0;font-family:var(--frak);color:var(--berry2);font-size:19px;line-height:1.2;letter-spacing:.02em}
+.orn{text-align:center;color:var(--berry2);font-size:15px;letter-spacing:.6em;margin:6px 0 0;line-height:1}
+h1{margin:0;font-family:var(--head);font-weight:400;font-size:clamp(28px,6.4vw,46px);line-height:1.2;letter-spacing:.04em}
 .tally{margin:0;text-align:right;line-height:1.1}
 .tally b{display:block;font-family:var(--latin);font-weight:400;font-size:clamp(34px,7vw,50px);color:var(--berry)}
 .tally small{font-size:12.5px;color:var(--ink2)}
@@ -74,7 +76,7 @@ h1{margin:0;font-family:var(--head);font-weight:700;font-size:clamp(28px,6.4vw,4
 .ledger summary:hover{background:var(--paper2)}
 .ledger details[open] summary{background:var(--paper2)}
 .no{font-family:var(--latin);color:var(--ink2);text-align:right;padding-right:10px;font-size:15px}
-.ttl{overflow-wrap:anywhere;font-weight:600}
+.ttl{overflow-wrap:anywhere;font-family:var(--head);font-size:16.5px}
 .tg{font-size:12px;color:var(--ink2);white-space:nowrap}
 .dt{font-family:var(--latin);font-size:14px;color:var(--ink2);text-align:right;white-space:nowrap}
 .more{padding:6px 2px 14px calc(3.5em + 16px);display:flex;gap:16px;align-items:flex-start}
@@ -89,7 +91,7 @@ h2.sub::after{content:"";flex:1;height:1px;background:var(--rule)}
 
 /* 日程 */
 .monthbar{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:22px 0 4px}
-.monthbar h2{margin:0;font-family:var(--head);font-weight:700;font-size:26px;letter-spacing:.05em}
+.monthbar h2{margin:0;font-family:var(--head);font-weight:400;font-size:26px;letter-spacing:.05em}
 .monthbar h2 span{font-family:var(--latin);font-weight:400;font-size:30px;margin-right:2px}
 .monthbar .nav{display:flex;gap:16px;font-size:14px}
 .note{font-size:12.5px;color:var(--ink2);margin:0 0 6px}
@@ -127,7 +129,7 @@ h2.sub::after{content:"";flex:1;height:1px;background:var(--rule)}
 .gml summary::-webkit-details-marker{display:none}
 .gml summary:hover,.gml details[open] summary{background:var(--paper2)}
 .th{width:52px;height:52px;object-fit:cover;border:1px solid var(--rule);background:var(--paper2);display:grid;place-items:center;font-family:var(--head);color:var(--ink2)}
-.gt{font-weight:600;overflow-wrap:anywhere;line-height:1.5}
+.gt{overflow-wrap:anywhere;line-height:1.5;font-family:var(--head);font-size:16.5px}
 .gs{font-size:12px;color:var(--ink2)}
 .gs .hot{color:var(--margin)}
 .gml .more{padding-left:66px}
@@ -137,7 +139,7 @@ h2.sub::after{content:"";flex:1;height:1px;background:var(--rule)}
 dialog{border:1px solid var(--ink);background:var(--paper);color:var(--ink);padding:0;max-width:min(560px,calc(100vw - 24px));width:100%;box-shadow:7px 7px 0 var(--rule)}
 dialog::backdrop{background:rgba(20,20,30,.35)}
 dialog form{padding:18px 18px 16px;display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
-dialog h3{grid-column:1/-1;margin:0 0 4px;font-family:var(--head);font-size:19px;font-weight:700}
+dialog h3{grid-column:1/-1;margin:0 0 4px;font-family:var(--head);font-size:20px;font-weight:400}
 dialog label{display:flex;flex-direction:column;gap:2px;font-size:12.5px;color:var(--ink2)}
 dialog label.full{grid-column:1/-1}
 dialog label.chk{flex-direction:row;align-items:center;gap:8px;color:var(--ink);font-size:14px}
@@ -189,6 +191,7 @@ footer{margin-top:48px;padding-top:10px;border-top:1px solid var(--rule);font-si
   </div>
   <p class="tally"><b id="tally">…</b><small id="tallySub">作品 通過</small></p>
 </header>
+<p class="orn" aria-hidden="true">❦ ✿ ❦</p>
 
 <nav class="idx" aria-label="ページ">
   <a href="#rec" data-tab="rec">通過記録</a>
@@ -243,7 +246,7 @@ footer{margin-top:48px;padding-top:10px;border-top:1px solid var(--rule);font-si
 </section>
 </main>
 
-<footer><span>れどこ’s ブルベリ農園</span><span id="loadedAt"></span></footer>
+<footer><span>れどこ’s ブルベリ農園</span><span><span id="loadedAt"></span> <button class="link" type="button" id="enterEdit">編集する</button></span></footer>
 </div>
 
 <!-- 通過記録の窓 -->
@@ -710,11 +713,17 @@ function refreshLists() {
 }
 function setOwner(on) {
   S.owner = on;
-  $('modeNote').hidden = !on; $('addRec').hidden = !on; $('addGm').hidden = !on;
+  $('modeNote').hidden = !on; $('addRec').hidden = !on; $('addGm').hidden = !on; $('enterEdit').hidden = on;
 }
 $('leaveEdit').onclick = () => {
   KEY = null; try { localStorage.removeItem('bb_key'); } catch (e) {}
   setOwner(false); renderRec(); renderGm(); if (S.month) loadMonth();
+};
+$('enterEdit').onclick = async () => {
+  const k = (prompt('編集用の鍵を入れてください') || '').trim(); if (!k) return;
+  KEY = k; try { localStorage.setItem('bb_key', k); } catch (e) {}
+  await loadAll();
+  if (S.owner) { toast('書き込みモードになりました'); renderSch && S.month && loadMonth(); }
 };
 async function loadAll() {
   try {
